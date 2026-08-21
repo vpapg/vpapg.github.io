@@ -131,7 +131,7 @@ h1 {
 }
 
 h2 {
-  margin: 2.35rem 0 0.8rem;
+  margin: 2.5rem 0 0.9rem;
   font-size: clamp(1.4rem, 2.5vw, 1.7rem);
 }
 
@@ -393,8 +393,7 @@ button:focus-visible,
 
 .author__section {
   margin-top: 1.4rem;
-  padding-top: 1.1rem;
-  border-top: 1px solid var(--border-light);
+  padding-top: 0;
 }
 
 .author__label {
@@ -466,8 +465,7 @@ button:focus-visible,
 }
 
 .page__title {
-  padding-bottom: 0.55rem;
-  border-bottom: 1px solid var(--border);
+  padding-bottom: 0;
 }
 
 .lede,
@@ -501,8 +499,7 @@ button:focus-visible,
 }
 
 .page__content h2 {
-  padding-bottom: 0.3rem;
-  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 0;
 }
 
 .contact-card {
@@ -515,13 +512,13 @@ button:focus-visible,
 
 /* Home posts: plain archive entries rather than cards */
 .archive {
-  margin-top: 2.4rem;
+  margin-top: 2.65rem;
 }
 
 .archive__title {
   margin-top: 0;
-  padding-bottom: 0.35rem;
-  border-bottom: 1px solid var(--border);
+  margin-bottom: 1rem;
+  padding-bottom: 0;
 }
 
 .list {
@@ -532,8 +529,11 @@ button:focus-visible,
 
 .list__item {
   margin: 0;
-  padding: 1.15rem 0 1.25rem;
-  border-bottom: 1px solid var(--border-light);
+  padding: 0.8rem 0;
+}
+
+.list__item + .list__item {
+  margin-top: 0.45rem;
 }
 
 .list__date {
@@ -559,6 +559,8 @@ button:focus-visible,
 .entries {
   width: 100%;
   list-style: none;
+  display: grid;
+  gap: 1.15rem;
   margin: 0;
   padding: 0;
 }
@@ -567,11 +569,8 @@ button:focus-visible,
   width: 100%;
   display: grid;
   gap: 0.15rem 1.5rem;
-  padding-block: 0.95rem;
-  border-top: 1px solid var(--border-light);
+  padding-block: 0.25rem;
 }
-
-.entry:last-child { border-bottom: 1px solid var(--border-light); }
 
 @media (min-width: 34rem) {
   .entry { grid-template-columns: var(--label-w) minmax(0, 1fr); }
@@ -622,6 +621,8 @@ button:focus-visible,
 .publication-list,
 .talk-list {
   list-style: none;
+  display: grid;
+  gap: 0.75rem;
   padding: 0;
   margin-left: 0;
 }
@@ -630,8 +631,7 @@ button:focus-visible,
 .publication-list > li,
 .talk-list > li {
   margin: 0;
-  padding: 0.8rem 0;
-  border-bottom: 1px solid var(--border-light);
+  padding: 0.25rem 0;
   background: transparent;
 }
 
@@ -668,6 +668,100 @@ a.talk__title {
 
 .compact-list {
   padding-left: 1.2rem;
+}
+
+
+/* Past-module disclosures -------------------------------------------------- */
+.module-disclosures {
+  width: 100%;
+  margin: 0.45rem 0 2rem;
+}
+
+.module-disclosure {
+  width: 100%;
+}
+
+.module-disclosure + .module-disclosure {
+  border-top: 1px solid var(--border-light);
+}
+
+.module-disclosure summary {
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.8rem 0.15rem;
+  color: var(--heading);
+  cursor: pointer;
+  list-style: none;
+  font-weight: 700;
+}
+
+.module-disclosure summary::-webkit-details-marker {
+  display: none;
+}
+
+.module-disclosure summary::after {
+  content: "\F282";
+  flex: 0 0 auto;
+  margin-left: 0.15rem;
+  font-family: "bootstrap-icons";
+  font-size: 0.95rem;
+  line-height: 1;
+  color: var(--accent);
+  transition: transform 0.18s ease;
+}
+
+.module-disclosure[open] summary::after {
+  transform: rotate(180deg);
+}
+
+.module-disclosure summary:hover {
+  color: var(--accent);
+}
+
+.module-disclosure summary:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+.module-disclosure__title {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.module-disclosure__hint {
+  flex: 0 0 auto;
+  margin-left: auto;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.module-disclosure__content {
+  padding: 0 0 0.55rem;
+}
+
+.module-disclosure__content .module-list {
+  margin: 0;
+}
+
+.module-disclosure__content .module-list > li:first-child {
+  border-top: 0;
+}
+
+@media (max-width: 520px) {
+  .module-disclosure__hint {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .module-disclosure summary::after {
+    transition: none;
+  }
 }
 
 /* Footer */
