@@ -1,93 +1,137 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="en-GB">
 <head>
-  <title>Varvara Papazoglou | Teaching</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- CSS only -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Teaching, modules, supervision and appointment information for Varvara Papazoglou." name="description"/>
+<meta content="#ffffff" name="theme-color"/>
+<title>Varvara Papazoglou – Teaching</title>
+<script data-theme-bootstrap="true">// Apply the selected theme before the page is painted.
+// The URL parameter is a fallback for file:// previews, where localStorage
+// may not be shared consistently between separate local HTML files.
+(function () {
+  var allowed = ['light', 'reading', 'dark'];
+  var theme = null;
 
-  <!-- JS, Popper.js, and jQuery -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  try {
+    var urlTheme = new URLSearchParams(window.location.search).get('theme');
+    if (allowed.indexOf(urlTheme) !== -1) theme = urlTheme;
+  } catch (error) {}
 
-  <!-- favicon, https://favicon.io/favicon-generator/-->
-  <link rel="apple-touch-icon" sizes="180x180" href="media/favicon_io/apple-touch-icon.png?">
-  <link rel="icon" type="image/png" sizes="32x32" href="media/favicon_io/favicon-32x32.png?">
-  <link rel="icon" type="image/png" sizes="16x16" href="media/favicon_io/favicon-16x16.png?">
-  <link rel="manifest" href="media/favicon_io/site.webmanifest?">
+  if (allowed.indexOf(theme) === -1) {
+    try { theme = localStorage.getItem('colour-theme'); } catch (error) {}
+  }
+
+  if (allowed.indexOf(theme) === -1) {
+    theme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+      ? 'dark'
+      : 'light';
+  }
+
+  document.documentElement.dataset.theme = theme;
+})();</script><link href="styles.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet"/>
+<link href="media/favicon_io/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="media/favicon_io/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="media/favicon_io/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="media/favicon_io/site.webmanifest" rel="manifest"/>
 </head>
-<body style="padding-top: 70px;"> <!-- so that fixed-top option in navbar doesn't overlay the page content -->
+<body data-page="teaching">
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="masthead">
+<div class="masthead__inner container">
+<a class="site-title" href="index.html" rel="noopener noreferrer" target="_blank">Varvara Papazoglou</a>
 
-
-
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-  <a class="navbar-brand" href="index.html">Varvara Papazoglou</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="collapsibleNavbar">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="index.html">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="aboutme.html">About me</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="teaching.html" style="color:steelblue;"><b>Teaching</b></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="research.html">Research</a>
-      </li>
-    </ul>
-  </div>  
-</nav>
-
-
-<div class="container" style="margin-top:30px;">
-  <h2>Teaching</h2>
-  
-  <p class="text-justify" style="margin-top: 30px;">As a <b>University Teaching Associate</b> at The University of Sheffield, Department of Computer Science:
-      <ul>
-        <li>2023-2024:
-          <ul>
-            <li>COM1005 <b>Machines and Intelligence</b> (with Prof. Rob Gaizauskas, Prof. Tony Prescott, Prof. Heidi Christensen, Alex Lucas)</li>
-            <li>COM6115 <b>Text Processing</b> (with Prof. Aline Villavicencio)</li>
-            <li>COM21002 <b>AI Group Project</b></li></ul>
-        </li>
-        <li>2022-2023:
-          <ul>
-            <li>COM1001 <b>Introduction to Software Engineering</b> (facilitator)</li>
-            <li>COM3420 <b>Software Hut</b> (facilitator)</li>
-            <li>COM6513 <b>Natural Language Processing</b> (with Prof. Nikos Aletras)</li>
-          </ul></li>        
-      </ul>
-  </p>
-  <p class="text-justify" style="margin-top: 30px;">During the academic year 2022-2023 as a <b>University Teaching Associate</b> at the University of Nottingham, School of Computer Science, I assisted in the delivery of the following modules:
-      <ul>
-        <li>COMP3012 <b>Compilers</b></li>
-        <li>COMP3074 <b>Human-AI Interaction</b></li>
-        <li>COMP4034 <b>Autonomous Robotic Systems</b></li>
-      </ul>
-  </p>
-    <p class="text-justify">Additionally, I have worked as a <b>Graduate Teaching Assistant</b> (GTA) for the following modules at The University of Sheffield:
-      <ul>
-        <li>COM1005 <b>Machines and Intelligence</b> (Undergraduate, Autumn '19-'20, '20-'21, '21-'22)</li>
-        <li>COM160/161 <b>Introduction to Programming and Problem Solving</b> (Undergraduate, Autumn '19-'20, '20-'21, '21-'22)</li>
-        <li>COM2009/3009 <b>Robotics</b> (Undergraduate, Spring '19-'20, '20-'21)</li>
-        <li>COM3110/4115 <b>Text Processing</b> (Undergraduate, Autumn '19-'20, '20-'21, '21-'22)</li>
-        <li>COM6115 <b>Text Processing</b> (Postgraduate, Autumn '19-'20, '20-'21)</li>
-        <li>COM3528 <b>Cognitive and Biomimetic Robotics</b> (Undergraduate, Spring '19-'20, '21-'22)</li>
-      </ul>
-  </p>
-    <!-- My responsibilities included: supporting students in the weekly lab sessions; marking assessments; occasionally, testing the material to be taught for particular sessions with the course leaders and other GTAs and contributing to it. The programming language used in all modules is Python.</p> -->
-    <p class="text-justify">I have also <b>volunteered</b> as a co-instructor in three cohorts of "Introduction to Python" courses offered by <a href="https://codefirstgirls.com/" target="_blank">Code First Girls</a> (CFG) and as a Python Guru in monthly sessions taking place at the University of Sheffield by Cookies & Code.</p>
-    <p class="text-justify">Additionally, I have worked as a freelancer <b>Assistant</b> and <b>Lead Instructor</b> for the Software Development Specialisation Degree offered by CFG (two cohorts).</p>
-    
+<div class="masthead__actions"><nav aria-label="Main navigation" class="greedy-nav">
+<a class="nav__item" data-nav="home" href="index.html" rel="noopener noreferrer">Home</a>
+<a class="nav__item" data-nav="about" href="about.html" rel="noopener noreferrer">About me</a>
+<a aria-current="page" class="nav__item active" data-nav="teaching" href="teaching.html" rel="noopener noreferrer">Teaching</a>
+<a class="nav__item" data-nav="research" href="research.html" rel="noopener noreferrer">Research</a>
+</nav><div aria-label="Colour theme" class="theme-switcher" role="group">
+<button aria-pressed="false" class="theme-button" data-theme-choice="light" title="Use light theme" type="button"><i aria-hidden="true" class="bi bi-sun"></i><span>Light</span></button>
+<button aria-pressed="false" class="theme-button" data-theme-choice="reading" title="Use warm reading theme" type="button"><i aria-hidden="true" class="bi bi-book"></i><span>Reading</span></button>
+<button aria-pressed="false" class="theme-button" data-theme-choice="dark" title="Use dark theme" type="button"><i aria-hidden="true" class="bi bi-moon"></i><span>Dark</span></button>
+</div></div></div>
+</header>
+<div class="initial-content container layout--two-col">
+<aside aria-label="Profile" class="sidebar">
+<div class="author">
+<img alt="Portrait of Varvara Papazoglou" class="author__avatar" src="media/vpavatar_new.png"/>
+<p class="author__name">Varvara Papazoglou</p>
+<p class="author__role">PhD candidate<br/>University Teaching Associate</p>
+<p class="author__affiliation">University of Sheffield</p>
+<div class="author__section">
+<p class="author__label">Areas of interest</p>
+<ul class="interest-list">
+<li>Computational Linguistics</li>
+<li>Natural Language Processing</li>
+<li>Music Information Retrieval</li>
+<li>Machine Learning</li>
+<li>Computer Science Education</li>
+<li>AI Literacy</li>
+</ul>
 </div>
-
-
+<nav aria-label="Contact and academic profiles" class="author__social">
+<ul class="author__links icons">
+<li><a aria-label="Email Varvara Papazoglou" href="mailto:v.papazoglou@sheffield.ac.uk" rel="noopener noreferrer" target="_blank" title="Email"><i aria-hidden="true" class="bi bi-envelope-fill"></i></a></li>
+<li><a aria-label="Varvara Papazoglou on LinkedIn" href="https://linkedin.com/in/varvara-papazoglou" rel="noopener noreferrer" target="_blank" title="LinkedIn"><i aria-hidden="true" class="bi bi-linkedin"></i></a></li>
+<li><a aria-label="Varvara Papazoglou on Google Scholar" href="https://scholar.google.com/citations?user=fMCU2qUAAAAJ" rel="noopener noreferrer" target="_blank" title="Google Scholar"><i aria-hidden="true" class="bi bi-mortarboard-fill"></i></a></li>
+<li><a aria-label="Varvara Papazoglou on ORCID" href="https://orcid.org/0009-0006-6162-4644" rel="noopener noreferrer" target="_blank" title="ORCID"><i aria-hidden="true" class="fa-brands fa-orcid"></i></a></li>
+</ul>
+</nav>
+</div>
+</aside>
+<main class="page" id="main" tabindex="-1">
+<nav aria-label="Breadcrumb" class="breadcrumbs"><a href="index.html" rel="noopener noreferrer" target="_blank">Home</a> <span aria-hidden="true">›</span> Teaching</nav>
+<h1 class="page__title">Teaching</h1>
+<div class="page__content">
+<h2>Current and recent modules</h2>
+<ul class="module-list">
+<li><span class="module-code">COM113</span><strong>Practical Algorithms and Data Structures</strong><!-- — <a href="syllabi/algorithms.pdf" rel="noopener noreferrer" target="_blank">Syllabus (PDF)</a>--></li>
+<li><span class="module-code">COM6018</span><strong>Data Science with Python</strong></li>
+</ul>
+<h2>Past modules</h2>
+<h3>Undergraduate</h3>
+<ul class="module-list">
+<li><span class="module-code">COM160/161</span><strong>Introduction to Programming and Problem Solving</strong></li>
+<li><span class="module-code">COM1001</span><strong>Introduction to Software Engineering</strong> — facilitator</li>
+<li><span class="module-code">COM1005</span><strong>Machines and Intelligence</strong></li>
+<li><span class="module-code">COM2009/3009</span><strong>Robotics</strong></li>
+<li><span class="module-code">COM21002</span><strong>AI Group Project</strong></li>
+<li><span class="module-code">COM3420</span><strong>Software Hut</strong> — facilitator</li>
+<li><span class="module-code">COMP3012</span><strong>Compilers</strong> — University of Nottingham</li>
+<li><span class="module-code">COMP3074</span><strong>Human-AI Interaction</strong> — University of Nottingham</li>
+<li><span class="module-code">COMP4034</span><strong>Autonomous Robotic Systems</strong> — University of Nottingham</li>
+</ul>
+<h3>Postgraduate</h3>
+<ul class="module-list">
+<li><span class="module-code">COM6115</span><strong>Text Processing</strong></li>
+<li><span class="module-code">COM6513</span><strong>Natural Language Processing</strong></li>
+</ul>
+<h2>Supervision</h2>
+<p>I supervise BSc and MSc projects primarily in:</p>
+<ul class="compact-list">
+<li>Music Information Retrieval</li>
+<li>Natural Language Processing</li>
+<li>Educational Software</li>
+<li>Language Learning</li>
+<li>Software Engineering</li>
+</ul>
+<p>Some <a href="media/dissertation_archive.pdf" rel="noopener noreferrer" target="_blank">past project ideas</a> are available online. Please contact me if you would like to discuss a proposal.</p>
+<!-- <h2>Office and appointments</h2>
+<address class="contact-card">
+<strong>Email:</strong> <a href="mailto:v.papazoglou@sheffield.ac.uk" rel="noopener noreferrer" target="_blank">v.papazoglou@sheffield.ac.uk</a><br/>
+<strong>Office:</strong> Room 210, Regent Court, 211 Portobello St, Sheffield S1 4DP<br/>
+<a href="https://calendar.app.google/Yqf9rdJNXgnHW2Rc7" rel="noopener noreferrer" target="_blank">Book an appointment</a>
+</address> -->
+</div>
+</main>
+</div>
+<footer class="site-footer">
+<div class="container"><p>© <span id="year"></span> Varvara Papazoglou</p></div>
+</footer>
+<script src="main.js"></script>
 </body>
 </html>

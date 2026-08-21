@@ -1,135 +1,165 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="en-GB">
 <head>
-  <title>Varvara Papazoglou | Home</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- CSS only -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> <!-- Bootstrap icons -->
-  
-  <!-- JS, Popper.js, and jQuery -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Teaching and research profile for Varvara Papazoglou, University Teaching Associate and PhD candidate at the University of Sheffield." name="description"/>
+<meta content="#ffffff" name="theme-color"/>
+<title>Varvara Papazoglou – Home</title>
+<script data-theme-bootstrap="true">// Apply the selected theme before the page is painted.
+// The URL parameter is a fallback for file:// previews, where localStorage
+// may not be shared consistently between separate local HTML files.
+(function () {
+  var allowed = ['light', 'reading', 'dark'];
+  var theme = null;
 
-  <!-- favicon, https://favicon.io/favicon-generator/-->
-  <link rel="apple-touch-icon" sizes="180x180" href="media/favicon_io/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="media/favicon_io/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="media/favicon_io/favicon-16x16.png">
-  <link rel="manifest" href="media/favicon_io/site.webmanifest">
+  try {
+    var urlTheme = new URLSearchParams(window.location.search).get('theme');
+    if (allowed.indexOf(urlTheme) !== -1) theme = urlTheme;
+  } catch (error) {}
+
+  if (allowed.indexOf(theme) === -1) {
+    try { theme = localStorage.getItem('colour-theme'); } catch (error) {}
+  }
+
+  if (allowed.indexOf(theme) === -1) {
+    theme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+      ? 'dark'
+      : 'light';
+  }
+
+  document.documentElement.dataset.theme = theme;
+})();</script><link href="styles.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet"/>
+<link href="media/favicon_io/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="media/favicon_io/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="media/favicon_io/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="media/favicon_io/site.webmanifest" rel="manifest"/>
+
 </head>
-<body style="padding-top: 70px;"> <!-- so that fixed-top option in navbar doesn't overlay the page content -->
+<body data-page="home">
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="masthead">
+<div class="masthead__inner container">
+<a class="site-title" href="index.html" rel="noopener noreferrer" target="_blank">Varvara Papazoglou</a>
 
-
-
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-  <a class="navbar-brand" href="index.html">Varvara Papazoglou</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="collapsibleNavbar">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="index.html" style="color:steelblue;"><b>Home</b></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="aboutme.html">About me</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="teaching.html">Teaching</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="research.html">Research</a>
-      </li>  
-    </ul>
-  </div>  
-</nav>
-
-
-<div class="container-fluid" style="margin-top:30px; padding-left: 20px; padding-right: 20px;">
-  <div class="row">
-    <div class="col-sm-3">
-      <!-- <h2 class="text-center" styl="margin-bottom":0>Varvara<br>Papazoglou</h2> -->
-      <div style="margin-top":0>
-      	<img src="media/vpavatar_new.png" alt="Varvara Papazoglou" class="mx-auto d-block rounded-circle" style="max-width:150px; margin-bottom:0; margin-top:0">
-      </div>
-      <p class="text-center"></p>
-
-      <dl style="margin-bottom:80px">
-        <dd class="text-center" style="margin-bottom:0; margin-top:0">PhD candidate</dd>
-        <dd class="text-center">University Teaching Associate</dd>
-      	 <dd class="text-center" style="margin-bottom:30px">University of Sheffield</dd>
-      	<dt class="text-center">Areas of interest:</dt>
-      	 <dd class="text-center" style="margin-bottom:0">Computational Linguistics</dd>
-         <dd class="text-center" style="margin-bottom:0">Natural Language Processing</dd>
-         <dd class="text-center" style="margin-bottom:0">(Music) Information Retrieval</dd> 
-         <dd class="text-center" style="margin-bottom:30px">Machine Learning</dd>
-         <dd class="text-center" style="margin-bottom:30px"><i class="fas fa-map-marker-alt" style="color: steelblue;"></i> Sheffield, UK</dd>
-         <dd class="text-center">
-          <a href="mailto:varvara.i.pap@gmail.com" target="_blank"><i class="fas fa-envelope fa-lg" style="color: steelblue;"></i></a>
-          <a href="https://scholar.google.com/citations?user=F5cCqCUAAAAJ" target="_blank"><img src="media/g_scholar.png" alt="Google Scholar" style="max-width:19px; padding-bottom:4px;"></a>
-          <a href="https://www.linkedin.com/in/varvara-papazoglou/" target="_blank"><i class="fab fa-linkedin fa-lg" style="color: steelblue;"></i></a>
-          <a href="https://github.com/vpapg" target="_blank"><i class="fab fa-github-square fa-lg" style="color: steelblue;"></i></a>
-          </dd>
-      </dl>
-      
-      
-
-    </div>
-
-    <div class="col-sm-9" style="padding-left:50px;">
-      <h2>News/Posts</h2>
-      <br>
-      <h5 style="color:steelblue;"><b>The University of Sheffield - Teaching Associate</b></h5>
-      <h6>Feb 20, 2023</h6>
-      <p class="text-justify"><small>I am glad to announce that I joined TUoS as a University Teaching Associate.</small></p>
-      <br>
-      <h5 style="color:steelblue;"><b>Guest Lecture: Introduction to MIR & NLP</b></h5>
-      <h6>Dec 12, 2022</h6>
-      <p class="text-justify"><small>Today I had a guest lecture for the module <i>Human-AI Interaction</i>, where I introduced students to the intersection of Music Information Retrieval and Natural Language Processing. [<a href="https://drive.google.com/file/d/188nue5q7Xmte8dGh7H97PwSgW4djZnR4/view" target="_blank">slides</a>]</small></p>
-      <br>
-      <h5 style="color:steelblue;"><b>The University of Nottingham - Teaching Associate</b></h5>
-      <h6>Sep 20, 2022</h6>
-      <p class="text-justify"><small>Today I joined the University of Nottingham, School of Computer Science as a part-time Teaching Associate. I will be assisting in the delivery of lab sessions and assignment marking of the following undergraduate and postgraduate modules: 
-      <ul>
-        <li>Human-AI interaction</li>
-        <li>Compilers</li>
-        <li>Autonomous Robotic Systems</li>
-      </ul>
-      </small></p>
-      <br>
-      <h5 style="color:steelblue;"><b>Code First Girls - Lead Instructor</b></h5>
-      <h6>May 5, 2022</h6>
-      <p class="text-justify"><small>I am happy to announce that I will be working again for the upcoming 13-week CFG degree course in the Software Development Specialisation, this time as a Lead Instructor!</small></p>
-      <br>
-      <h5 style="color:steelblue;"><b>Code First Girls - Assistant Instructor</b></h5>
-      <h6>Nov 30, 2021</h6>
-      <p class="text-justify"><small>Being a volunteer co-instructor in three cohorts of CFG's 8-week <i>Introduction to Python</i> course from October 2020 to November 2021 was a very positive and rewarding experience. I am happy to now start working as a freelance Assistant Instructor for the upcoming 13-week <a href="https://codefirstgirls.com/courses/cfgdegree/" target="_blank">Nanodegree course</a>, in the Software Development specialisation.</small></p>
-      <br>
-      <h5 style="color:steelblue;"><b>NLP4MusA & ISMIR 2021</b></h5>
-      <h6>Nov 1, 2021</h6>
-      <p class="text-justify"><small>I am joining <a href="https://ismir2021.ismir.net/" target="_blank">ISMIR 2021</a> next week, as a session assistant <a href="https://ismir2021.ismir.net/team/" target="_blank">volunteer</a>, but also as an author, as I am having a <a href="https://drive.google.com/file/d/1EnqR7h01y8XDKKbC883tq035-3bJdxCc/view" target="_blank">poster</a> in the <a href="https://sites.google.com/view/nlp4musa-2021" target="_blank">NLP4MuSA</a> workshop on Friday.</small></p>
-      <br>
-      <h5 style="color:steelblue;"><b>2nd International School on Psycholinguistics, Neurolinguistics and Clinical Linguistics</b></h5>
-      <h6>Oct 30, 2021</h6>
-      <p class="text-justify"><small>From 25th to 29th October I attended online the <a href="http://www.ff.uns.ac.rs/sr-lat/studijski-programi/programi-celozivotnog-ucenja/letnje-i-zimske-skole/2nd-international-school-on-psycholinguistics-neurolinguistics-and-clinical-linguistics" target="_blank">2nd International School on Psycholinguistics, Neurolinguistics and Clinical Linguistics</a>, by the University of Novi Sad, Serbia. It was the school I enjoyed the most, not only because its focus was on neurocognitive foundations of language (an area that I am deeply interested in and I constantly try to learn more about so as to eventually focus on it in my research), but also because the courses were very well-structured. It also helped me explore linguistic complexity further, which is partly one of my research areas at the moment.</small></p>
-      <br>
-      <h5><a href="./posts/2021-07-20.html">Summer School: LxMLS 2021</a></h5>
-      <h6>July 20, 2021</h6>
-      <br>
-      <!-- <h5><a href="">Perks of PhD studies: GTA</a></h5>
-      <h6>May 8, 2020</h6>
-      <br> -->
-      <h5><a href="./posts/2020-02-28.html">David Crystal Charity Lecture: Child Language Revisited</a></h5>
-      <h6>Feb 28, 2020</h6>
-      <br>
-      <h5><a href="./posts/2018-11-07.html">Edit Distance Implementation in Python 3</a></h5>
-      <h6>Nov 7, 2018</h6>
-    </div>
-  </div>
+<div class="masthead__actions"><nav aria-label="Main navigation" class="greedy-nav">
+<a aria-current="page" class="nav__item active" data-nav="home" href="index.html" rel="noopener noreferrer">Home</a>
+<a class="nav__item" data-nav="about" href="about.html" rel="noopener noreferrer">About me</a>
+<a class="nav__item" data-nav="teaching" href="teaching.html" rel="noopener noreferrer">Teaching</a>
+<a class="nav__item" data-nav="research" href="research.html" rel="noopener noreferrer">Research</a>
+</nav><div aria-label="Colour theme" class="theme-switcher" role="group">
+<button aria-pressed="false" class="theme-button" data-theme-choice="light" title="Use light theme" type="button"><i aria-hidden="true" class="bi bi-sun"></i><span>Light</span></button>
+<button aria-pressed="false" class="theme-button" data-theme-choice="reading" title="Use warm reading theme" type="button"><i aria-hidden="true" class="bi bi-book"></i><span>Reading</span></button>
+<button aria-pressed="false" class="theme-button" data-theme-choice="dark" title="Use dark theme" type="button"><i aria-hidden="true" class="bi bi-moon"></i><span>Dark</span></button>
+</div></div></div>
+</header>
+<div class="initial-content container layout--two-col">
+<aside aria-label="Profile" class="sidebar">
+<div class="author">
+<img alt="Portrait of Varvara Papazoglou" class="author__avatar" src="media/vpavatar_new.png"/>
+<p class="author__name">Varvara Papazoglou</p>
+<p class="author__role">PhD candidate<br/>University Teaching Associate</p>
+<p class="author__affiliation">University of Sheffield</p>
+<div class="author__section">
+<p class="author__label">Areas of interest</p>
+<ul class="interest-list">
+<li>Computational Linguistics</li>
+<li>Natural Language Processing</li>
+<li>Music Information Retrieval</li>
+<li>Machine Learning</li>
+<li>Computer Science Education</li>
+<li>AI Literacy</li>
+</ul>
 </div>
-
-
+<nav aria-label="Contact and academic profiles" class="author__social">
+<ul class="author__links icons">
+<li><a aria-label="Email Varvara Papazoglou" href="mailto:v.papazoglou@sheffield.ac.uk" rel="noopener noreferrer" target="_blank" title="Email"><i aria-hidden="true" class="bi bi-envelope-fill"></i></a></li>
+<li><a aria-label="Varvara Papazoglou on LinkedIn" href="https://linkedin.com/in/varvara-papazoglou" rel="noopener noreferrer" target="_blank" title="LinkedIn"><i aria-hidden="true" class="bi bi-linkedin"></i></a></li>
+<li><a aria-label="Varvara Papazoglou on Google Scholar" href="https://scholar.google.com/citations?user=fMCU2qUAAAAJ" rel="noopener noreferrer" target="_blank" title="Google Scholar"><i aria-hidden="true" class="bi bi-mortarboard-fill"></i></a></li>
+<li><a aria-label="Varvara Papazoglou on ORCID" href="https://orcid.org/0009-0006-6162-4644" rel="noopener noreferrer" target="_blank" title="ORCID"><i aria-hidden="true" class="fa-brands fa-orcid"></i></a></li>
+</ul>
+</nav>
+</div>
+</aside>
+<main class="page" id="main" tabindex="-1">
+<div class="page__header">
+<h1 class="page__title">Home</h1>
+<p class="lede">Teaching academic in Computer Science at the University of Sheffield, passionate about interdisciplinarity.</p>
+<dl class="quick-facts">
+<dt>Academic interests</dt>
+<dd>Computational Linguistics, Natural Language Processing, Music Information Retrieval, Machine Learning, Computer Science Education and AI Literacy</dd>
+<dt>Other interests</dt>
+<dd>Piano, Photography, Reading, Hiking, Cooking</dd>
+<dt>Contact</dt>
+<dd><a href="mailto:v.papazoglou@sheffield.ac.uk" rel="noopener noreferrer" target="_blank">v.papazoglou@sheffield.ac.uk</a></dd>
+</dl>
+</div>
+<section aria-labelledby="currently" class="archive">
+<h2 class="archive__title" id="currently">Currently</h2>
+<ul class="entries">
+<li class="entry">
+<p class="entry__label">
+<i aria-hidden="true" class="bi bi-mortarboard-fill entry__icon"></i>
+<span>Teaching</span>
+</p>
+<div class="entry__body">
+<p class="entry__title">COM113 Practical Algorithms and Data Structures · COM6018 Data Science with Python</p>
+<p class="entry__note"><a href="teaching.html" rel="noopener noreferrer">Current and past teaching</a></p>
+</div>
+</li>
+<li class="entry">
+<p class="entry__label">
+<i aria-hidden="true" class="fa-solid fa-microscope entry__icon"></i>
+<span>Research</span>
+</p>
+<div class="entry__body">
+<p class="entry__title">Song lyrics: what machines and listeners think songs are about, and how consistently they agree</p>
+<p class="entry__note"><a href="research.html" rel="noopener noreferrer">Publications, talks and research</a></p>
+</div>
+</li>
+<li class="entry">
+<p class="entry__label">
+<i aria-hidden="true" class="bi bi-geo-alt-fill entry__icon"></i>
+<span>Office</span>
+</p>
+<div class="entry__body">
+<p class="entry__title">Room 210 · School of Computer Science · Regent Court · University of Sheffield</p>
+<p class="entry__note"><a href="https://calendar.app.google/Yqf9rdJNXgnHW2Rc7" rel="noopener noreferrer" target="_blank">Book an appointment</a></p>
+</div>
+</li>
+</ul>
+</section>
+<!-- <section class="archive" aria-labelledby="latest-posts">
+        <h2 id="latest-posts" class="archive__title">Latest posts</h2>
+        <ul class="list" id="posts-list">
+          <li class="list__item">
+            <article class="h-entry">
+              <time class="list__date" datetime="2025-11-11">11 Nov 2025</time>
+              <h3 class="list__title"><a class="u-url" href="posts/welcome.html">Welcome</a></h3>
+              <p class="list__excerpt">This site shares teaching materials, supervision information and research updates.</p>
+            </article>
+          </li>
+          <li class="list__item">
+            <article class="h-entry">
+              <time class="list__date" datetime="2025-06-20">20 Jun 2025</time>
+              <h3 class="list__title"><a class="u-url" href="posts/project-showcase.html">Student project showcase</a></h3>
+              <p class="list__excerpt">Highlights from this year’s capstone projects.</p>
+            </article>
+          </li>
+        </ul>
+      </section> -->
+</main>
+</div>
+<footer class="site-footer">
+<div class="container"><p>© <span id="year"></span> Varvara Papazoglou</p></div>
+</footer>
+<!-- <script id="posts-data" type="application/json">[
+    { "title": "Welcome", "url": "posts/welcome.html", "date": "2025-11-11", "excerpt": "This site shares teaching materials, supervision information and research updates." },
+    { "title": "Student project showcase", "url": "posts/project-showcase.html", "date": "2025-06-20", "excerpt": "Highlights from this year’s capstone projects." }
+  ]</script> -->
+<script src="main.js"></script>
 </body>
 </html>
