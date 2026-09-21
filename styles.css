@@ -590,7 +590,7 @@ button:focus-visible,
 .entry__title {
   margin: 0;
   font-size: 1.065rem;
-  font-weight: 700;
+  /*font-weight: 700;*/
   line-height: 1.45;
 }
 
